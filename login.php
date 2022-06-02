@@ -1,10 +1,33 @@
+<?php
+ $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $databaseName = "loginentry";
+
+    $conn = mysqli_connect($servername, $username, $password, $databaseName);
+    if (!$conn)
+    {
+        die ("connection failed".
+            mysqli_connect_error());
+    }
+    if(isset($_POST['loginUsername'])&& isset($_POST['loginPassword'])){
+    $un = mysqli_real_escape_string($conn,$_POST['loginUsername']);
+    $pw =  mysqli_real_escape_string($conn,$_POST['loginPassword']);
+ 
+    $query = "SELECT email,password FROM loginpage WHERE email='$un' AND password='$pw'";
+
+    $result_can = mysqli_query($conn, $query); 
+    $count=mysqli_num_rows($result_can);
+    }
+
+    ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
-   
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -21,7 +44,16 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-       
+
+      <style type="text/css">
+
+        .feedback{
+            color: #D8000C;
+            font-weight: 500 ;
+            font-size: 18px;
+        }
+    </style>
+
   </head>
   <body>
     <div class="login-page">
@@ -42,7 +74,7 @@
               <!-- Form Panel    -->
               <div class="col-lg-6 bg-black">
                 <div class="d-flex align-items-center px-4 px-lg-5 h-100">
-                  <form class="login-form py-5 w-100" method="get" action="index.html">
+                  <form class="login-form py-5 w-100" action="login.php" method="POST" name="data">
                     <div class="input-material-group mb-3">
                       <input  class="input-material" id="login-username" type="text" name="loginUsername" autocomplete="off" required data-validate-field="loginUsername">
                       <label class="label-material" for="login-username">User Name</label>
@@ -52,6 +84,19 @@
                       <label class="label-material" for="login-password">Password</label>
                     </div>
                     <button class="btn btn-primary mb-3" id="login" type="submit">Login</button><br>
+
+                    <?php
+   
+                    if(isset($_POST['loginUsername'])&& isset($_POST['loginPassword'])){
+                          if($count==1)
+                          {
+                              header("Location:index.html");
+                          } else {
+
+                              echo '<div class="feedback">* Incorrect details<div/>';
+                          }
+                      }
+                    ?>
                   </form>
                 </div>
               </div>
@@ -94,7 +139,6 @@
       // while using file:// protocol
       // pls don't forget to change to your domain :)
       injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-      
       
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
