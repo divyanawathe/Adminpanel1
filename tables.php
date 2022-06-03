@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Material Admin by Bootstrapious.com</title>
+    <title>Tables</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -16,13 +16,12 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.jpg">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    
     <div class="page">
       <!-- Main Navbar-->
       <header class="header z-index-50">
@@ -43,8 +42,8 @@
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
-                  <div class="brand-text d-none d-lg-inline-block"><span>Bootstrap </span><strong>Dashboard</strong></div>
-                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
+                  <div class="brand-text d-none d-lg-inline-block"><strong>VISUAREAL</strong></div>
+                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -53,79 +52,7 @@
                 <li class="nav-item d-flex align-items-center"><a id="search" href="#">
                     <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                       <use xlink:href="#find-1"> </use>
-                    </svg></a></li>
-                <!-- Notifications-->
-                <li class="nav-item dropdown"> <a class="nav-link text-white" id="notifications" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                      <use xlink:href="#chart-1"> </use>
-                    </svg><span class="badge bg-red badge-corner fw-normal">12</span></a>
-                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="notifications">
-                    <li><a class="dropdown-item py-3" href="#"> 
-                        <div class="d-flex">
-                          <div class="icon icon-sm bg-blue">
-                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                              <use xlink:href="#envelope-1"> </use>
-                            </svg>
-                          </div>
-                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">You have 6 new messages </span><small class="small text-gray-600">4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a class="dropdown-item py-3" href="#"> 
-                        <div class="d-flex">
-                          <div class="icon icon-sm bg-green">
-                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                              <use xlink:href="#chats-1"> </use>
-                            </svg>
-                          </div>
-                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">New 2 WhatsApp messages</span><small class="small text-gray-600">4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a class="dropdown-item py-3" href="#"> 
-                        <div class="d-flex">
-                          <div class="icon icon-sm bg-orange">
-                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                              <use xlink:href="#checked-window-1"> </use>
-                            </svg>
-                          </div>
-                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">Server Rebooted</span><small class="small text-gray-600">8 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a class="dropdown-item py-3" href="#"> 
-                        <div class="d-flex">
-                          <div class="icon icon-sm bg-green">
-                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                              <use xlink:href="#chats-1"> </use>
-                            </svg>
-                          </div>
-                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">New 2 WhatsApp messages</span><small class="small text-gray-600">10 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a class="dropdown-item all-notifications text-center" href="#"> <strong class="text-xs text-gray-600">view all notifications                                            </strong></a></li>
-                  </ul>
-                </li>
-                <!-- Messages                        -->
-                <li class="nav-item dropdown"> <a class="nav-link text-white" id="messages" rel="nofollow" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                      <use xlink:href="#envelope-1"> </use>
-                    </svg><span class="badge bg-orange badge-corner fw-normal">10</span></a>
-                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="messages">
-                    <li><a class="dropdown-item d-flex py-3" href="#"> <img class="img-fluid rounded-circle" src="img/avatar-1.jpg" alt="..." width="45">
-                        <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">Jason Doe</span><small class="small text-gray-600"> Sent You Message</small></div></a></li>
-                    <li><a class="dropdown-item d-flex py-3" href="#"> <img class="img-fluid rounded-circle" src="img/avatar-2.jpg" alt="..." width="45">
-                        <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">Jason Doe</span><small class="small text-gray-600"> Sent You Message</small></div></a></li>
-                    <li><a class="dropdown-item d-flex py-3" href="#"> <img class="img-fluid rounded-circle" src="img/avatar-3.jpg" alt="..." width="45">
-                        <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">Jason Doe</span><small class="small text-gray-600"> Sent You Message</small></div></a></li>
-                    <li><a class="dropdown-item text-center" href="#"> <strong class="text-xs text-gray-600">Read all messages   </strong></a></li>
-                  </ul>
-                </li>
-                <!-- Languages dropdown    -->
-                <li class="nav-item dropdown"><a class="nav-link text-white dropdown-toggle d-flex align-items-center" id="languages" href="#" data-bs-toggle="dropdown" aria-expanded="false"><img class="me-2" src="img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
-                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="languages">
-                    <li><a class="dropdown-item" rel="nofollow" href="#"> <img class="me-2" src="img/flags/16/DE.png" alt="English"><span class="text-xs text-gray-700">German</span></a></li>
-                    <li><a class="dropdown-item" rel="nofollow" href="#"> <img class="me-2" src="img/flags/16/FR.png" alt="English"><span class="text-xs text-gray-700">French                                         </span></a></li>
-                  </ul>
-                </li>
-                <!-- Logout    -->
-                <li class="nav-item"><a class="nav-link text-white" href="login.html"> <span class="d-none d-sm-inline">Logout</span>
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                      <use xlink:href="#security-1"> </use>
-                    </svg></a></li>
+                    </svg></a></li>  
               </ul>
             </div>
           </div>
@@ -151,47 +78,24 @@
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#portfolio-grid-1"> </use>
                 </svg>Tables </a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="charts.html"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#sales-up-1"> </use>
-                </svg>Charts </a></li>
             <li class="sidebar-item"><a class="sidebar-link" href="forms.html"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#survey-1"> </use>
                 </svg>Forms </a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
+                <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#browser-window-1"> </use>
-                </svg>Example dropdown </a>
+                </svg>Dropdown</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="#">Page</a></li>
                 <li><a class="sidebar-link" href="#">Page</a></li>
                 <li><a class="sidebar-link" href="#">Page</a></li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link" href="login.html"> 
+           
+            <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#disable-1"> </use>
                 </svg>Login page </a></li>
-          </ul><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Extras</span>
-          <ul class="list-unstyled py-4">
-            <li class="sidebar-item"> <a class="sidebar-link" href="#"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#imac-screen-1"> </use>
-                </svg>Demo </a></li>
-            <li class="sidebar-item"> <a class="sidebar-link" href="#"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#chart-1"> </use>
-                </svg>Demo </a></li>
-            <li class="sidebar-item"> <a class="sidebar-link" href="#"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#quality-1"> </use>
-                </svg>Demo </a></li>
-            <li class="sidebar-item"> <a class="sidebar-link" href="#"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#security-shield-1"> </use>
-                </svg>Demo </a></li>
-          </ul>
         </nav>
         <div class="content-inner w-100">
           <!-- Page Header-->
@@ -223,45 +127,59 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Basic Table</h3>
+                      <h3 class="h4 mb-0">Inqueries</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
                         <table class="table mb-0">
                           <thead>
                             <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
+                              <th scope="col">id</th>
+                              <th scope="col">vendor_id</th>
+                              <th scope="col">name</th>
+                              <th scope="col">email</th>
+                              <th scope="col">phone_num</th>
+                              <th scope="col">city</th>
+                              <th scope="col">state</th>
+                              <th scope="col">qur_subject</th>
+                              <th scope="col">query</th>
+                              <th scope="col">page_no</th>
+                              
                             </tr>
                           </thead>
                           <tbody>
+                            <?php include 'retrieve-data.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
                             <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                              <td><?php echo $array[5];?></td>
+                              <td><?php echo $array[6];?></td>
+                              <td><?php echo $array[7];?></td>
+                              <td><?php echo $array[8];?></td>
+                              <td><?php echo $array[9];?></td>
+                             
                             </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th class="border-bottom-0" scope="row">3</th>
-                              <td class="border-bottom-0">Larry</td>
-                              <td class="border-bottom-0">the Bird</td>
-                              <td class="border-bottom-0">@twitter</td>
-                            </tr>
+                            <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="9" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+
                           </tbody>
                         </table>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
+               <div class="col-lg-6">
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
@@ -270,38 +188,41 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Striped Table</h3>
+                      <h3 class="h4 mb-0">ral_standard</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
                         <table class="table mb-0 table-striped">
                           <thead>
                             <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
+                              <th scope="col">id</th>
+                              <th scope="col">ralcode</th>
+                              <th scope="col">rgbnum</th>
+                              <th scope="col">hexnum</th>
+                              <th scope="col">Name</th>
                             </tr>
                           </thead>
                           <tbody>
+                             <?php include 'retrieve-data2.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
                             <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                             
                             </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th class="border-bottom-0" scope="row">3</th>
-                              <td class="border-bottom-0">Larry</td>
-                              <td class="border-bottom-0">the Bird</td>
-                              <td class="border-bottom-0">@twitter</td>
-                            </tr>
+                            <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="4" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+
                           </tbody>
                         </table>
                       </div>
@@ -317,38 +238,43 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Striped table with hover effect</h3>
+                      <h3 class="h4 mb-0">sink</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
                         <table class="table mb-0 table-striped table-hover">
                           <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
+                           <tr>
+                              <th scope="col">id</th>
+                              <th scope="col">source</th>
+                              <th scope="col">filename</th>
+                              <th scope="col">product_name</th>
+                              <th scope="col">type</th>
+                              <th scope="col">thumbnail</th>
                             </tr>
                           </thead>
                           <tbody>
+                            <?php include 'retrieve-data3.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
                             <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                              <td><?php echo $array[5];?></td>
+                             
                             </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th class="border-bottom-0" scope="row">3</th>
-                              <td class="border-bottom-0">Larry</td>
-                              <td class="border-bottom-0">the Bird</td>
-                              <td class="border-bottom-0">@twitter</td>
-                            </tr>
+                             <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="5" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+                            
                           </tbody>
                         </table>
                       </div>
@@ -364,59 +290,90 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Compact Table</h3>
+                      <h3 class="h4 mb-0">Client</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
                         <table class="table mb-0 table-striped table-sm">
                           <thead>
                             <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
+                              <th scope="col">id</th>
+                              <th scope="col">Thumbnail</th>
+                              <th scope="col">Design_Diffuse</th>
+                              <th scope="col">Design_Specular</th>
+                              <th scope="col">Design_Bump</th>
+                              <th scope="col">Design Name</th>
+                              <th scope="col">X-Scale</th>
+                              <th scope="col">Y-Scale</th>
+                              <th scope="col">Normal_Intensity</th>
+                              <th scope="col">Specular_Intensity</th>
+                              <th scope="col">Reflective_Level</th>
+                              <th scope="col">Metallic</th>
+                              <th scope="col">Roughness</th>
+                              <th scope="col">GroutColour</th>
+                              <th scope="col">GroutWidth</th>
+                              <th scope="col">Room</th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Finish</th>
+                              <th scope="col">Concept_Code</th>
+                              <th scope="col">Product_Code</th>
+                              <th scope="col">Place_Type</th>
+                              <th scope="col">Catalogue</th>
+                              <th scope="col">Bookmatch</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">RandomTile</th>
+                              
                             </tr>
                           </thead>
                           <tbody>
+                            <?php include 'retrieve-data4.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
                             <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                              <td><?php echo $array[5];?></td>
+                              <td><?php echo $array[6];?></td>
+                              <td><?php echo $array[7];?></td>
+                              <td><?php echo $array[8];?></td>
+                              <td><?php echo $array[9];?></td>
+                              <td><?php echo $array[10];?></td>
+                              <td><?php echo $array[11];?></td>
+                              <td><?php echo $array[12];?></td>
+                              <td><?php echo $array[13];?></td>
+                              <td><?php echo $array[14];?></td>
+                              <td><?php echo $array[15];?></td>
+                              <td><?php echo $array[16];?></td>
+                              <td><?php echo $array[17];?></td>
+                              <td><?php echo $array[18];?></td>
+                              <td><?php echo $array[19];?></td>
+                              <td><?php echo $array[20];?></td>
+                              <td><?php echo $array[21];?></td>
+                              <td><?php echo $array[22];?></td>
+                              <td><?php echo $array[23];?></td>
+                              <td><?php echo $array[24];?></td>
+                             
                             </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th class="border-bottom-0" scope="row">3</th>
-                              <td class="border-bottom-0">Larry</td>
-                              <td class="border-bottom-0">the Bird</td>
-                              <td class="border-bottom-0">@twitter</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">4</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">5</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                          </tbody>
+                            <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="24" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+                          </tbody> 
                         </table>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> 
               </div>
-            </div>
-          </section>
+            </div> -->
+          </section> 
           <!-- Page Footer-->
           <footer class="position-absolute bottom-0 bg-darkBlue text-white text-center py-3 w-100 text-xs" id="footer">
             <div class="container-fluid">
