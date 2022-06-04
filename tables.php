@@ -281,7 +281,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
+              <div class="col-lg-6">
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
@@ -372,7 +372,98 @@
                   </div>
                 </div> 
               </div>
-            </div> -->
+            </div>
+
+           <div class="col-lg-6">
+                  <div class="card mb-0">
+                    <div class="card-header">
+                      <div class="card-close">
+                        <div class="dropdown">
+                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
+                        </div>
+                      </div>
+                      <h3 class="h4 mb-0">Check</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table mb-0 table-striped table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">id</th>
+                              <th scope="col">Thumbnail</th>
+                              <th scope="col">Design_Diffuse</th>
+                              <th scope="col">Design_Specular</th>
+                              <th scope="col">Design_Bump</th>
+                              <th scope="col">Design Name</th>
+                              <th scope="col">X-Scale</th>
+                              <th scope="col">Y-Scale</th>
+                              <th scope="col">Normal_Intensity</th>
+                              <th scope="col">Specular_Intensity</th>
+                              <th scope="col">Reflective_Level</th>
+                              <th scope="col">Metallic</th>
+                              <th scope="col">Roughness</th>
+                              <th scope="col">GroutColour</th>
+                              <th scope="col">GroutWidth</th>
+                              <th scope="col">Room</th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Finish</th>
+                              <th scope="col">Concept_Code</th>
+                              <th scope="col">Product_Code</th>
+                              <th scope="col">Place_Type</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">RandomTile</th>
+                              
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <?php include 'retrieve-data5.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
+                            <tr>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                              <td><?php echo $array[5];?></td>
+                              <td><?php echo $array[6];?></td>
+                              <td><?php echo $array[7];?></td>
+                              <td><?php echo $array[8];?></td>
+                              <td><?php echo $array[9];?></td>
+                              <td><?php echo $array[10];?></td>
+                              <td><?php echo $array[11];?></td>
+                              <td><?php echo $array[12];?></td>
+                              <td><?php echo $array[13];?></td>
+                              <td><?php echo $array[14];?></td>
+                              <td><?php echo $array[15];?></td>
+                              <td><?php echo $array[16];?></td>
+                              <td><?php echo $array[17];?></td>
+                              <td><?php echo $array[18];?></td>
+                              <td><?php echo $array[19];?></td>
+                              <td><?php echo $array[20];?></td>
+                              <td><?php echo $array[21];?></td>
+                              <td><?php echo $array[22];?></td>
+                              
+                             
+                            </tr>
+                            <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="24" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+                          </tbody> 
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+
           </section> 
           <!-- Page Footer-->
           <footer class="position-absolute bottom-0 bg-darkBlue text-white text-center py-3 w-100 text-xs" id="footer">
