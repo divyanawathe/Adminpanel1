@@ -401,7 +401,7 @@
                               <th scope="col">Normal_Intensity</th>
                               <th scope="col">Specular_Intensity</th>
                               <th scope="col">Reflective_Level</th>
-                              <th scope="col">Metallic</th>
+                              <th scope="col">Metalic</th>
                               <th scope="col">Roughness</th>
                               <th scope="col">GroutColour</th>
                               <th scope="col">GroutWidth</th>
