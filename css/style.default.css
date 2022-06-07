@@ -1551,6 +1551,12 @@ progress {
     flex: 0 0 auto;
     width: 41.66667%;
   }
+    .col-lg-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 41.66667%;
+  }
   
   .col-lg-7 {
     -webkit-box-flex: 0;
@@ -1669,7 +1675,11 @@ progress {
     --bs-gutter-x: 3rem;
   }
   .g-lg-5,
-  .gy-lg-5 {
+  .gx-lg-5 {
+    --bs-gutter-x: 3rem;
+  }
+  .g-lg-6,
+  .gy-lg-6 {
     --bs-gutter-y: 3rem;
   }
 }
