@@ -83,10 +83,10 @@
                   <use xlink:href="#browser-window-1"> </use>
                 </svg>Forms</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="forms.html">Inqueries</a></li>
-                <li><a class="sidebar-link" href="#">ral_standard</a></li>
-                <li><a class="sidebar-link" href="#">sink</a></li>
-                <li><a class="sidebar-link" href="#">Client</a></li>
+                 <li><a class="sidebar-link" href="forms.html">Inqueries</a></li>
+                <li><a class="sidebar-link" href="forms2.html">ral_standard</a></li>
+                <li><a class="sidebar-link" href="forms3.html">sink</a></li>
+                <li><a class="sidebar-link" href="forms4.html">Client</a></li>
               </ul>
             </li>
            
