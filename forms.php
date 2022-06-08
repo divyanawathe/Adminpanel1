@@ -1,4 +1,34 @@
 <!DOCTYPE html>
+<?php
+//including the database connection file
+include("mydbCon.php");
+if(isset($_POST['Submit'])) 
+{    
+  $id = $_POST['id'];
+  $vendor_id = $_POST['vendor_id'];
+  $name = $_POST['name'];
+  $email= $_POST['registerEmail'];
+  $phone_num= $_POST['phone_num'];
+  $city = $_POST['city'];
+  $state= $_POST['state'];
+  $qur_subject = $_POST['qur_subject'];
+  $query = $_POST['query'];
+  $page_no = $_POST['page_no'];
+        
+           
+//insert data to database
+  $result ="INSERT INTO Inqueries (id,vendor_id,name,email,phone_num,city,state,qur_subject,query,page_no) VALUES ('".$_POST['id']."', '".$_POST['vendor_id']."','".$_POST['name']."', '".$_POST['registerEmail']."','".$_POST['phone_num']."', '".$_POST['city']."', '".$_POST['state']."','".$_POST['qur_subject']."','".$_POST['query']."','".$_POST['page_no']."')";
+  if ($dbCon->query($result) === TRUE)
+  {
+    echo "success";
+  }
+  else{
+    echo "fail";
+  }
+}
+
+?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -22,7 +52,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <form action="forms.php" method="POST" name="data">
+
     <div class="page">
       <!-- Main Navbar-->
       <header class="header z-index-50">
@@ -85,7 +115,7 @@
                   <use xlink:href="#browser-window-1"> </use>
                 </svg>Forms</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="forms.html">Inqueries</a></li>
+                <li><a class="sidebar-link" href="forms.php">Inqueries</a></li>
                 <li><a class="sidebar-link" href="forms2.html">ral_standard</a></li>
                 <li><a class="sidebar-link" href="forms3.html">sink</a></li>
                 <li><a class="sidebar-link" href="forms4.html">Client</a></li>
@@ -132,7 +162,7 @@
                       <h3 class="h4 mb-0">Inqueries</h3>
                     </div>
                     <div class="card-body">
-                      <form class="form-horizontal">
+                      <form action="#" method="POST" class="form-horizontal">
                         <div class="row">
                           <label class="col-sm-3 form-label" >id</label>
                           <div class="col-sm-9">
@@ -207,7 +237,7 @@
                         <div class="row">
                           <div class="col-sm-9 ms-auto">
                             <button class="btn btn-secondary" type="reset">Cancel</button>
-                            <button class="btn btn-primary" type="submit">Save changes</button>
+                            <button class="btn btn-primary" type="submit" name="Submit">Save changes</button>
                           </div>
                         </div>
                       </form>
@@ -259,6 +289,6 @@
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </form>
+
   </body>
 </html>
