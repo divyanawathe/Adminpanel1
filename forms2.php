@@ -1,4 +1,29 @@
 <!DOCTYPE html>
+<?php
+//including the database connection file
+include("mydbCon.php");
+if(isset($_POST['Submit'])) 
+{    
+
+
+
+
+//insert data to database
+  $result ="INSERT INTO ral_standard (ralcode,rgbnum,hexnum,Name) VALUES ('".$_POST['ralcode']."','".$_POST['rgbnum']."','".$_POST['hexnum']."','".$_POST['name']."')";
+  if ($dbCon->query($result) === TRUE)
+  {
+
+    echo"<script type='text/javascript'>alert('submitted successfully!')</script>";
+
+  }
+  else{
+    echo "<script type='text/javascript'>alert('failed!')</script>";
+  }
+}
+
+?>
+
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -22,7 +47,6 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <form action="forms.php" method="POST" name="data">
     <div class="page">
       <!-- Main Navbar-->
       <header class="header z-index-50">
@@ -85,10 +109,10 @@
                   <use xlink:href="#browser-window-1"> </use>
                 </svg>Forms</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="forms.html">Inqueries</a></li>
-                <li><a class="sidebar-link" href="forms2.html">ral_standard</a></li>
-                <li><a class="sidebar-link" href="forms3.html">sink</a></li>
-                <li><a class="sidebar-link" href="forms4.html">Client</a></li>
+                <li><a class="sidebar-link" href="forms.php">Inqueries</a></li>
+                <li><a class="sidebar-link" href="forms2.php">ral_standard</a></li>
+                <li><a class="sidebar-link" href="forms3.php">sink</a></li>
+                <li><a class="sidebar-link" href="forms4.php">Client</a></li>
               </ul>
             </li>
 
@@ -129,85 +153,51 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Inqueries</h3>
+                      <h3 class="h4 mb-0">ral_standard</h3>
                     </div>
                     <div class="card-body">
-                      <form class="form-horizontal">
+                      <form action="#" method="POST" class="form-horizontal">
                         <div class="row">
-                          <label class="col-sm-3 form-label" >id</label>
+                          <label class="col-sm-3 form-label">ID</label>
                           <div class="col-sm-9">
                             <input class="form-control" type="number" name="id" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label" >vendor_id</label>
+                          <label class="col-sm-3 form-label">ralcode</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" name="vendor_id" required>
+                            <input class="form-control" type="text" name="ralcode"required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">name</label>
+                          <label class="col-sm-3 form-label">rgbnum</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="rgbnum" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">hexnum</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="hexnum" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Name</label>
                           <div class="col-sm-9">
                             <input class="form-control" type="text" name="name" required>
                           </div>
                         </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label" >email</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" id="register-email" type="email" name="registerEmail" required>
-                          </div>
-                        </div>
-                         <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">phone_num</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="tel" id="phone" name="phone_num" pattern="[0-9]{10}" required>
-                          </div>
-                        </div>
-
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">city</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="city" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">state</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="state" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">qur_subject</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="qur_subject" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">query</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="query" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label" >page_no</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="page_no" required>
-                          </div>
-                        </div>
+                        
+                       
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
                           <div class="col-sm-9 ms-auto">
                             <button class="btn btn-secondary" type="reset">Cancel</button>
-                            <button class="btn btn-primary" type="submit">Save changes</button>
+                            <button class="btn btn-primary" type="submit" name="Submit">Save changes</button>
                           </div>
                         </div>
                       </form>
@@ -259,6 +249,5 @@
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </form>
   </body>
 </html>

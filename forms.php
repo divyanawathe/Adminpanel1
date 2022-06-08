@@ -4,26 +4,19 @@
 include("mydbCon.php");
 if(isset($_POST['Submit'])) 
 {    
-  $id = $_POST['id'];
-  $vendor_id = $_POST['vendor_id'];
-  $name = $_POST['name'];
-  $email= $_POST['registerEmail'];
-  $phone_num= $_POST['phone_num'];
-  $city = $_POST['city'];
-  $state= $_POST['state'];
-  $qur_subject = $_POST['qur_subject'];
-  $query = $_POST['query'];
-  $page_no = $_POST['page_no'];
+  
         
            
 //insert data to database
   $result ="INSERT INTO Inqueries (id,vendor_id,name,email,phone_num,city,state,qur_subject,query,page_no) VALUES ('".$_POST['id']."', '".$_POST['vendor_id']."','".$_POST['name']."', '".$_POST['registerEmail']."','".$_POST['phone_num']."', '".$_POST['city']."', '".$_POST['state']."','".$_POST['qur_subject']."','".$_POST['query']."','".$_POST['page_no']."')";
   if ($dbCon->query($result) === TRUE)
   {
-    echo "success";
+
+    echo"<script type='text/javascript'>alert('submitted successfully!')</script>";
+
   }
   else{
-    echo "fail";
+    echo "<script type='text/javascript'>alert('failed!')</script>";
   }
 }
 
@@ -116,9 +109,9 @@ if(isset($_POST['Submit']))
                 </svg>Forms</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
                 <li><a class="sidebar-link" href="forms.php">Inqueries</a></li>
-                <li><a class="sidebar-link" href="forms2.html">ral_standard</a></li>
-                <li><a class="sidebar-link" href="forms3.html">sink</a></li>
-                <li><a class="sidebar-link" href="forms4.html">Client</a></li>
+                <li><a class="sidebar-link" href="forms2.php">ral_standard</a></li>
+                <li><a class="sidebar-link" href="forms3.php">sink</a></li>
+                <li><a class="sidebar-link" href="forms4.php">Client</a></li>
               </ul>
             </li>
 

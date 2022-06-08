@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+<?php
+//including the database connection file
+include("mydbCon.php");
+if(isset($_POST['Submit'])) 
+{    
+  
+        
+           
+//insert data to database
+  $result ="INSERT INTO Inqueries (id,vendor_id,name,email,phone_num,city,state,qur_subject,query,page_no) VALUES ('".$_POST['id']."', '".$_POST['vendor_id']."','".$_POST['name']."', '".$_POST['registerEmail']."','".$_POST['phone_num']."', '".$_POST['city']."', '".$_POST['state']."','".$_POST['qur_subject']."','".$_POST['query']."','".$_POST['page_no']."')";
+  if ($dbCon->query($result) === TRUE)
+  {
+
+    echo"<script type='text/javascript'>alert('submitted successfully!')</script>";
+
+  }
+  else{
+    echo "<script type='text/javascript'>alert('failed!')</script>";
+  }
+}
+
+?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -84,10 +107,10 @@
                   <use xlink:href="#browser-window-1"> </use>
                 </svg>Forms</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="forms.html">Inqueries</a></li>
-                <li><a class="sidebar-link" href="forms2.html">ral_standard</a></li>
-                <li><a class="sidebar-link" href="forms3.html">sink</a></li>
-                <li><a class="sidebar-link" href="forms4.html">Client</a></li>
+                <li><a class="sidebar-link" href="forms.php">Inqueries</a></li>
+                <li><a class="sidebar-link" href="forms2.php">ral_standard</a></li>
+                <li><a class="sidebar-link" href="forms3.php">sink</a></li>
+                <li><a class="sidebar-link" href="forms4.php">Client</a></li>
               </ul>
             </li>
 
@@ -128,58 +151,190 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">sink</h3>
+                      <h3 class="h4 mb-0">Client</h3>
                     </div>
                     <div class="card-body">
-                      <form class="form-horizontal">
+                       <form action="#" method="POST" class="form-horizontal">
                         <div class="row">
                           <label class="col-sm-3 form-label">id</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="number" required>
+                            <input class="form-control" type="number" name="id" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">source</label>
+                          <label class="col-sm-3 form-label">Thumbnail</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" required>
+                            <input class="form-control" type="text" name="Thumbnail" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">filename</label>
+                          <label class="col-sm-3 form-label">Design_Diffuse</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" required>
+                            <input class="form-control" type="text" name="Design_Diffuse" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">product_name</label>
+                          <label class="col-sm-3 form-label">Design_Specular</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" required>
+                            <input class="form-control" type="text"name="Design_Specular" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">type</label>
+                          <label class="col-sm-3 form-label">Design_Bump</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" required>
+                            <input class="form-control" type="text" name="Design_Bump" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">thumbnail</label>
+                          <label class="col-sm-3 form-label">Design Name</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" required>
+                            <input class="form-control" type="text" name="Design Name" required>
                           </div>
                         </div>
-                        
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">X-Scale</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="X-Scale" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Y-Scale</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Y-Scale" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Normal_Intensity</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Normal_Intensity" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Specular_Intensity</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Specular_Intensity" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Reflective_Level</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Reflective_Level" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Metallic</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Metallic" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Roughness</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Roughness" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">GroutColour</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="GroutColour" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">GroutWidth</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="GroutWidth" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Room</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Room" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Type</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Type" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Finish</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Finish" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Concept_Code</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Concept_Code" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Product_Code</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Product_Code" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Place_Type</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text"name="Place_Type" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Catalogue</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Catalogue" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Bookmatch</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="Bookmatch" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">Description</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text"name="Description" required>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-5 border-gray-200"></div>
+                        <div class="row">
+                          <label class="col-sm-3 form-label">RandomTile</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" name="RandomTile" required>
+                          </div>
+                        </div>
                        
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
                           <div class="col-sm-9 ms-auto">
                             <button class="btn btn-secondary" type="reset">Cancel</button>
-                            <button class="btn btn-primary" type="submit">Save changes</button>
+                            <button class="btn btn-primary" type="submit" name="Submit">Save changes</button>
                           </div>
                         </div>
                       </form>
