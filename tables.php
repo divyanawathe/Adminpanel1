@@ -300,7 +300,7 @@
                               <th scope="col">Design_Diffuse</th>
                               <th scope="col">Design_Specular</th>
                               <th scope="col">Design_Bump</th>
-                              <th scope="col">Design Name</th>
+                              <th scope="col">DesignName</th>
                               <th scope="col">X-Scale</th>
                               <th scope="col">Y-Scale</th>
                               <th scope="col">Normal_Intensity</th>
