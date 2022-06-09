@@ -3,11 +3,12 @@
 //including the database connection file
 include("mydbCon.php");
 if(isset($_POST['Submit'])) 
-{             
-  //insert data to database
-  $result ="INSERT INTO client (id,Thumbnail,Design_Diffuse,Design_Specular,Design_Bump,DesignName,X-Scale,Y-Scale,Normal_Intensity,Specular_Intensity,Reflective_Level,Metallic,Roughness,GroutColour,GroutWidth,Room,Type,Finish,Concept_Code,Product_Code,Place_Type,Catalogue,Bookmatch,Description,RandomTile) VALUES ('".$_POST['id']."','".$_POST['Thumbnail']."','".$_POST['Design_Diffuse']."','".$_POST['Design_Specular']."','".$_POST['Design_Bump']."','".$_POST['DesignName']."','".$_POST['X-Scale']."','".$_POST['Y-Scale']."','".$_POST['Normal_Intensity']."','".$_POST['Specular_Intensity']."','".$_POST['Reflective_Level']."','".$_POST['Metallic']."','".$_POST['Roughness']."','".$_POST['GroutColour']."','".$_POST['GroutWidth']."','".$_POST['Room']."','".$_POST['Type']."','".$_POST['Finish']."','".$_POST['Concept_Code']."','".$_POST['Product_Code']."','".$_POST['Place_Type']."','".$_POST['Catalogue']."','".$_POST['Bookmatch']."','".$_POST['Description']."','".$_POST['RandomTile']."')";
+{    
   
-
+        
+           
+//insert data to database
+  $result ="INSERT INTO client  VALUES ('".$_POST['id']."', '".$_POST['Thumbnail']."','".$_POST['Design_Diffuse']."', '".$_POST['Design_Specular']."','".$_POST['Design_Bump']."', '".$_POST['DesignName']."', '".$_POST['X-Scale']."','".$_POST['Y-Scale']."','".$_POST['Normal_Intensity']."','".$_POST['Specular_Intensity']."','".$_POST['Reflective_Level']."','".$_POST['Metallic']."','".$_POST['Roughness']."','".$_POST['GroutColour']."','".$_POST['GroutWidth']."','".$_POST['Room']."','".$_POST['Type']."','".$_POST['Finish']."','".$_POST['Concept_Code']."','".$_POST['Product_Code']."','".$_POST['Place_Type']."','".$_POST['Catalogue']."','".$_POST['Bookmatch']."','".$_POST['Description']."','".$_POST['RandomTile']."')";
   if ($dbCon->query($result) === TRUE)
   {
 
@@ -190,9 +191,9 @@ if(isset($_POST['Submit']))
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
-                          <label class="col-sm-3 form-label">DesignName</label>
+                          <label class="col-sm-3 form-label">Design Name</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="text" name="DesignName" required>
+                            <input class="form-control" type="text" name="Design Name" required>
                           </div>
                         </div>
                         <div class="border-bottom my-5 border-gray-200"></div>
