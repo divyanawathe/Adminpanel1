@@ -226,6 +226,7 @@ if(isset($_POST['Submit']))
                             <input class="form-control" type="text" name="page_no" required>
                           </div>
                         </div>
+                        
                         <div class="border-bottom my-5 border-gray-200"></div>
                         <div class="row">
                           <div class="col-sm-9 ms-auto">

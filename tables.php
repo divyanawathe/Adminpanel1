@@ -42,7 +42,7 @@
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
-                  <div class="brand-text d-none d-lg-inline-block"><strong>VISUAREAL</strong></div>
+                  <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
               </div>
@@ -114,20 +114,31 @@
             </div>
           </div>
           <section class="tables">   
-            <div class="container-fluid">
+            <div class="">
               <div class="row gy-4">
                 <div class="col-lg-6">
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
                         <div class="dropdown">
-                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="forms.html"> <i class="fas fa-cog"></i>Edit</a></div>
+                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v">
+                            </i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1">
+                            <a class="dropdown-item py-1 px-3 remove" href="#"> 
+                              <i class="fas fa-times"></i>
+                              Close
+                            </a>
+                            <a class="dropdown-item py-1 px-3 edit" href="forms.html"> 
+                              <i class="fas fa-cog"></i>Edit
+                            </a>
+                          </div>
                         </div>
                       </div>
                       <h3 class="h4 mb-0">Inqueries</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body overflow-auto" style="height: 400px;">
                       <div class="table-responsive">
                         <table class="table mb-0">
                           <thead>
@@ -142,10 +153,10 @@
                               <th scope="col">qur_subject</th>
                               <th scope="col">query</th>
                               <th scope="col">page_no</th>
-                              
+                              <th scope="col">Delete</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="overflow-auto">
                             <?php include 'retrieve-data.php'; ?>
                 <?php if ($result->num_rows > 0): ?>
 
@@ -161,6 +172,13 @@
                               <td><?php echo $array[7];?></td>
                               <td><?php echo $array[8];?></td>
                               <td><?php echo $array[9];?></td>
+                              <td>
+                                <button type="button" class="btn btn-outline-danger">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                  </svg>
+                                </button>
+                              </td>
                              
                             </tr>
                             <?php endwhile; ?>
@@ -188,19 +206,19 @@
                       </div>
                       <h3 class="h4 mb-0">ral_standard</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body overflow-auto" style="height: 400px;">
                       <div class="table-responsive">
                         <table class="table mb-0 table-striped">
-                          <thead>
                             <tr>
                               <th scope="col">id</th>
                               <th scope="col">ralcode</th>
                               <th scope="col">rgbnum</th>
                               <th scope="col">hexnum</th>
                               <th scope="col">Name</th>
+                              <th scope="col">Delete </th>
                             </tr>
-                          </thead>
-                          <tbody>
+                      
+                          
                              <?php include 'retrieve-data2.php'; ?>
                 <?php if ($result->num_rows > 0): ?>
 
@@ -211,6 +229,13 @@
                               <td><?php echo $array[2];?></td>
                               <td><?php echo $array[3];?></td>
                               <td><?php echo $array[4];?></td>
+                              <td>
+                                <button type="button" class="btn btn-outline-danger">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                  </svg>
+                                </button>
+                              </td>
                              
                             </tr>
                             <?php endwhile; ?>
@@ -221,7 +246,7 @@
                  <?php endif; ?>
                 <?php mysqli_free_result($result); ?>
 
-                          </tbody>
+                          
                         </table>
                       </div>
                     </div>
@@ -238,7 +263,7 @@
                       </div>
                       <h3 class="h4 mb-0">sink</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body overflow-auto" style="height: 400px;">
                       <div class="table-responsive">
                         <table class="table mb-0 table-striped table-hover">
                           <thead>
@@ -249,6 +274,7 @@
                               <th scope="col">product_name</th>
                               <th scope="col">type</th>
                               <th scope="col">thumbnail</th>
+                              <th scope="col">Delete </th>
                             </tr>
                           </thead>
                           <tbody>
@@ -263,6 +289,13 @@
                               <td><?php echo $array[3];?></td>
                               <td><?php echo $array[4];?></td>
                               <td><?php echo $array[5];?></td>
+                               <td>
+                                <button type="button" class="btn btn-outline-danger">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                  </svg>
+                                </button>
+                              </td>
                              
                             </tr>
                              <?php endwhile; ?>
@@ -290,7 +323,7 @@
                       </div>
                       <h3 class="h4 mb-0">Client</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body overflow-auto" style="height: 400px;">
                       <div class="table-responsive">
                         <table class="table mb-0 table-striped table-sm">
                           <thead>
@@ -300,7 +333,7 @@
                               <th scope="col">Design_Diffuse</th>
                               <th scope="col">Design_Specular</th>
                               <th scope="col">Design_Bump</th>
-                              <th scope="col">DesignName</th>
+                              <th scope="col">Design Name</th>
                               <th scope="col">X-Scale</th>
                               <th scope="col">Y-Scale</th>
                               <th scope="col">Normal_Intensity</th>
@@ -320,7 +353,7 @@
                               <th scope="col">Bookmatch</th>
                               <th scope="col">Description</th>
                               <th scope="col">RandomTile</th>
-                              
+                              <th scope="col">Delete </th>
                             </tr>
                           </thead>
                           <tbody>
@@ -354,6 +387,13 @@
                               <td><?php echo $array[22];?></td>
                               <td><?php echo $array[23];?></td>
                               <td><?php echo $array[24];?></td>
+                               <td>
+                                <button type="button" class="btn btn-outline-danger">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                  </svg>
+                                </button>
+                              </td>
                              
                             </tr>
                             <?php endwhile; ?>
@@ -374,7 +414,7 @@
 
           </section> 
           <!-- Page Footer-->
-         <footer class="position-absolute bottom-0 bg-dark text-center py-3 w-100 text-xs" id="footer" >
+         <footer class="position-absolute bottom-0 bg-dark text-center py-3 w-100 text-xs"  id="footer" >
                   <img style="width: 10%;" src="img/logo2.png">
           </footer>
         </div>
