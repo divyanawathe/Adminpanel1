@@ -66,7 +66,7 @@ if(isset($_POST['Submit']))
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
-                  <div class="brand-text d-none d-lg-inline-block"><strong>VISUAREAL</strong></div>
+                  <div class="brand-text d-none d-lg-inline-block"><img style="width:150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
               </div>

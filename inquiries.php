@@ -116,98 +116,16 @@
           <section class="tables">   
             <div class="container-fluid">
               <div class="row gy-4">
-                <div class="col-lg-6">
-                  <div class="card mb-0">
-                    <div class="card-header">
-                      <div class="card-close">
-                        <div class="dropdown">
-                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v">
-                            </i>
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1">
-                            <a class="dropdown-item py-1 px-3 remove" href="#"> 
-                              <i class="fas fa-times"></i>
-                              Close
-                            </a>
-                            <a class="dropdown-item py-1 px-3 edit" href="forms.html"> 
-                              <i class="fas fa-cog"></i>Edit
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <h3 class="h4 mb-0">Inqueries</h3>
-                    </div>
-                    <div class="card-body overflow-auto" style="height: 400px;">
-                      <div class="table-responsive">
-                        <table class="table mb-0">
-                          <thead>
-                            <tr>
-                              <th scope="col">id</th>
-                              <th scope="col">vendor_id</th>
-                              <th scope="col">name</th>
-                              <th scope="col">email</th>
-                              <th scope="col">phone_num</th>
-                              <th scope="col">city</th>
-                              <th scope="col">state</th>
-                              <th scope="col">qur_subject</th>
-                              <th scope="col">query</th>
-                              <th scope="col">page_no</th>
-                              <th scope="col">Delete</th>
-                            </tr>
-                          </thead>
-                          <tbody class="overflow-auto">
-                            <?php include 'retrieve-data.php'; ?>
-                <?php if ($result->num_rows > 0): ?>
-
-                <?php while($array=mysqli_fetch_row($result)): ?>
-                  <form method="POST" name="del" action="delete.php">
-                            <tr>
-                              <th scope="row"><?php echo $array[0];?></th>
-                              <input type="hidden" name="id" value=<?php echo $array[0]; ?>>
-                              <td><?php echo $array[1];?></td>
-                              <td><?php echo $array[2];?></td>
-                              <td><?php echo $array[3];?></td>
-                              <td><?php echo $array[4];?></td>
-                              <td><?php echo $array[5];?></td>
-                              <td><?php echo $array[6];?></td>
-                              <td><?php echo $array[7];?></td>
-                              <td><?php echo $array[8];?></td>
-                              <td><?php echo $array[9];?></td>
-                              <td>
-                                <button type="submit" name="submit" class="btn btn-outline-danger" value="Inqueries" >
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                                  </svg>
-                                </button>
-                              </td>
-                             
-                            </tr>
-                      </form>
-                            <?php endwhile; ?>
-                            <?php else: ?>
-                           <tr>
-                   <td colspan="9" rowspan="1" headers="">No Data Found</td>
-                </tr>
-                 <?php endif; ?>
-                <?php mysqli_free_result($result); ?>
-
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                <div class="col-lg-6">
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
                         <div class="dropdown">
                           <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="forms2.html"> <i class="fas fa-cog"></i>Edit</a></div>
+                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="forms2.php  "> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">ral_standard</h3>
+                      <h3 class="h4 mb-0">Colour</h3>
                     </div>
                     <div class="card-body overflow-auto" style="height: 400px;">
                       <div class="table-responsive">
@@ -219,6 +137,7 @@
                               <th scope="col">hexnum</th>
                               <th scope="col">Name</th>
                               <th scope="col">Delete </th>
+                              <th scope="col">Edit </th>
                             </tr>
                       
                           
@@ -241,7 +160,13 @@
                                   </svg>
                                 </button>
                               </td>
-                             
+                              <td>
+                                 <button type="submit" name="submit" class="btn btn-outline-danger" value="ral_standard" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+</svg>
+                                </button>
+                              </td>
                             </tr>
                             </form>
                             <?php endwhile; ?>
@@ -258,6 +183,78 @@
                     </div>
                   </div>
                 </div>
+
+
+                <div class="col-lg-6">
+                  <div class="card mb-0">
+                    <div class="card-header">
+                      <div class="card-close">
+                        <div class="dropdown">
+                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="forms2.php  "> <i class="fas fa-cog"></i>Edit</a></div>
+                        </div>
+                      </div>
+                      <h3 class="h4 mb-0">Colour</h3>
+                    </div>
+                    <div class="card-body overflow-auto" style="height: 400px;">
+                      <div class="table-responsive">
+                        <table class="table mb-0 table-striped">
+                            <tr>
+                              <th scope="col">id</th>
+                              <th scope="col">ralcode</th>
+                              <th scope="col">rgbnum</th>
+                              <th scope="col">hexnum</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Delete </th>
+                              <th scope="col">Edit </th>
+                            </tr>
+                      
+                          
+                             <?php include 'retrieve-data2.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
+                  <form method="POST" name="del" action="delete.php">
+                            <tr>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <input type="hidden" name="id" value=<?php echo $array[0]; ?>>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                              <td>
+                                 <button type="submit" name="submit" class="btn btn-outline-danger" value="ral_standard" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                  </svg>
+                                </button>
+                              </td>
+                              <td>
+                                 <button type="submit" name="submit" class="btn btn-outline-danger" value="ral_standard" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                                </button>
+                              </td>
+                            </tr>
+                            </form>
+                            <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="4" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+
+                          
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
                 <div class="col-lg-6">
                   <div class="card mb-0">
                     <div class="card-header">
@@ -281,6 +278,7 @@
                               <th scope="col">type</th>
                               <th scope="col">thumbnail</th>
                               <th scope="col">Delete </th>
+                              <th scope="col">Edit </th>
                             </tr>
                           </thead>
                           <tbody>
@@ -304,7 +302,14 @@
                                   </svg>
                                 </button>
                               </td>
-                             
+                             <td>
+                               <button type="submit" name="submit" class="btn btn-outline-danger" value="ral_standard" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+</svg>
+                                </button>
+                              </td>
+                           
                             </tr>
                             </form>
                              <?php endwhile; ?>
@@ -363,6 +368,7 @@
                               <th scope="col">Description</th>
                               <th scope="col">RandomTile</th>
                               <th scope="col">Delete </th>
+                              <th scope="col">Edit</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -405,6 +411,14 @@
                                   </svg>
                                 </button>
                               </td>
+                           
+                               <td>
+                               <button type="submit" name="submit" class="btn btn-outline-danger" value="ral_standard" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+</svg>
+                                </button>
+                              </td>
                              
                             </tr>
                             </form>
@@ -423,6 +437,9 @@
                 </div> 
               </div>
             </div>
+
+
+
 
           </section> 
           <!-- Page Footer-->
