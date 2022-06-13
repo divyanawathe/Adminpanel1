@@ -35,6 +35,7 @@
             </button>
             <form id="searchForm" action="#" role="search">
               <input class="form-control shadow-0" type="text" placeholder="What are you looking for...">
+              
             </form>
           </div>
           <div class="container-fluid w-100">
