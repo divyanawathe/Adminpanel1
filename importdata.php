@@ -29,15 +29,15 @@ if(isset($_POST['importSubmit'])){
                 $Name = $line[4];
                 
                 // Check whether member already exists in the database with the same email
-                $prevQuery = "SELECT id FROM members WHERE email = '".$line[1]."'";
+                $prevQuery = "SELECT id FROM ral_standard WHERE ralcode = '".$line[1]."'";
                 $prevResult = $dbCon->query($prevQuery);
                 
                 if($prevResult->num_rows > 0){
                     // Update member data in the database
-                    $dbCon->query("UPDATE members SET name = '".$name."', phone = '".$phone."', status = '".$status."', modified = NOW() WHERE email = '".$email."'");
+                    $dbCon->query("UPDATE ral_standard SET ralcode = '".$ralcode."', rgbnum = '".$rgbnum."', hexnum = '".$hexnum."', modified = NOW() WHERE name = '".$name."'");
                 }else{
                     // Insert member data in the database
-                    $dbCon->query("INSERT INTO members (name, email, phone, created, modified, status) VALUES ('".$name."', '".$email."', '".$phone."', NOW(), NOW(), '".$status."')");
+                    $dbCon->query("INSERT INTO ral_standard (ralcode,rgbnum,hexnum,Name) VALUES ('".$_POST['ralcode']."','".$_POST['rgbnum']."','".$_POST['hexnum']."','".$_POST['name']."')");
                 }
             }
             
