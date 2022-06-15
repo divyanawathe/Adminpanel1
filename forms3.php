@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <?php
 //including the database connection file
 include("mydbCon.php");
@@ -20,9 +21,7 @@ if(isset($_POST['Submit']))
     echo "<script type='text/javascript'>alert('failed!')</script>";
   }
 }
-
 ?>
-
 <html>
   <head>
     <meta charset="utf-8">
