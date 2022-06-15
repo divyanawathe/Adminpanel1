@@ -227,14 +227,14 @@ if(!empty($_GET['status'])){
           <!-- Import link -->
     <div class="col-md-12 head">
         <div class="float-right">
-            <a href="javascript:void(0);" class="btn btn-info" onclick="formToggle('importFrm');"><i class="plus"></i> Import</a>
+            <a href="javascript:void(0);" class="btn btn-success" onclick="formToggle('importFrm');"><i class="plus"></i> Import</a>
         </div>
     </div>
            <!-- Show/hide CSV upload form -->
     <div id="importFrm" style="display: none;">
         <form action="importData.php" method="post" enctype="multipart/form-data">
             <input type="file" name="file" />
-            <a href="javascript:void(0);" class="btn btn-info" onclick="formToggle('importFrm');"><i class="plus"></i> Import</a>
+            <input style="color: blue; background-color: blueviolet;" type="submit"  name="importSubmit" value="IMPORT">
         </form>
     </div>
 
