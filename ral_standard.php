@@ -1,3 +1,38 @@
+<?php
+// Load the database configuration file
+include_once 'mydbCon.php';
+
+// Get status message
+if(!empty($_GET['status'])){
+    switch($_GET['status']){
+        case 'succ':
+            $statusType = 'alert-success';
+            $statusMsg = 'Members data has been imported successfully.';
+            break;
+        case 'err':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Some problem occurred, please try again.';
+            break;
+        case 'invalid_file':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Please upload a valid CSV file.';
+            break;
+        default:
+            $statusType = '';
+            $statusMsg = '';
+    }
+}
+?>
+
+
+<!-- Display status message -->
+<?php if(!empty($statusMsg)){ ?>
+<div class="col-xs-12">
+    <div class="alert <?php echo $statusType; ?>"><?php echo $statusMsg; ?></div>
+</div>
+<?php } ?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -112,14 +147,14 @@
           <section class="tables">   
             <div class="container-fluid">
               <div class="row gy-4">
-                
                <div class="col-lg-6">
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
                         <div class="dropdown">
                           <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 edit" href="forms2.php"> Update</a></div>
+                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 edit" href="forms2.php">Update</a>
+                            <a  class="dropdown-item py-1 px-3 edit">Import</a></div>
                         </div>
                       </div>
                       <h3 class="h4 mb-0">ral_standard</h3>
@@ -175,13 +210,34 @@
                  <?php endif; ?>
                 <?php mysqli_free_result($result); ?>
 
-                          
+                          <?php
+        // Get member rows
+        $result = $dbCon->query("SELECT * FROM ral_standard ORDER BY id DESC");
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+        ?>
+         <?php } }else{ ?>
+           <?php } ?> 
                         </table>
                       </div>
                     </div>
                   </div>
                 </div>
           </section> 
+          <!-- Import link -->
+    <div class="col-md-12 head">
+        <div class="float-right">
+            <a href="javascript:void(0);" class="btn btn-success" onclick="formToggle('importFrm');"><i class="plus"></i> Import</a>
+        </div>
+    </div>
+           <!-- Show/hide CSV upload form -->
+    <div id="importFrm" style="display: none;">
+        <form action="importData.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <input style="color: blue; background-color: blueviolet;" type="submit"  name="importSubmit" value="IMPORT">
+        </form>
+    </div>
+
           <!-- Page Footer-->
          <footer class="position-absolute bottom-0 bg-dark text-center py-3  text-xs" id="footer" >
                   <img style="width: 10%;" src="img/logo2.png">
@@ -190,6 +246,19 @@
       </div>
     </div>
     <!-- JavaScript files-->
+
+   
+<script>
+function formToggle(ID){
+    var element = document.getElementById(ID);
+    if(element.style.display === "none"){
+        element.style.display = "block";
+    }else{
+        element.style.display = "none";
+    }
+}
+
+</script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="vendor/just-validate/js/just-validate.min.js"></script>
