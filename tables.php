@@ -78,22 +78,10 @@
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#portfolio-grid-1"> </use>
                 </svg>Tables </a></li>
-             <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#browser-window-1"> </use>
-                </svg>Forms</a>
-              <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                 <li><a class="sidebar-link" href="forms.php">Inqueries</a></li>
-                <li><a class="sidebar-link" href="forms2.html">ral_standard</a></li>
-                <li><a class="sidebar-link" href="forms3.html">sink</a></li>
-                <li><a class="sidebar-link" href="forms4.html">Client</a></li>
-              </ul>
+             
             </li>
            
-            <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#disable-1"> </use>
-                </svg>Login page </a></li>
+            
         </nav>
         <div class="content-inner w-100">
           <!-- Page Header-->
@@ -117,6 +105,7 @@
             <div class="container-fluid">
               <div class="row gy-4">
                 <div class="col-lg-6">
+
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
@@ -138,7 +127,7 @@
                       </div>
                       <h3 class="h4 mb-0">Inqueries</h3>
                     </div>
-                    <div class="card-body overflow-auto" style="height: 400px;">
+                    <div class="card-body overflow-auto" style="height: 400px ;" >
                       <div class="table-responsive">
                         <table class="table mb-0">
                           <thead>
@@ -423,7 +412,7 @@
                               <td><?php echo $array[23];?></td>
                               <td><?php echo $array[24];?></td>
                                <td>
-                                 <button type="submit" name="submit" class="btn btn-outline-danger" value="Client" >
+                                 <button type="submit" name="submit" class="btn btn-outline-info" value="Client" >
                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                                   </svg>

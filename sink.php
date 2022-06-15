@@ -1,33 +1,9 @@
 <!DOCTYPE html>
-<?php
-//including the database connection file
-include("mydbCon.php");
-if(isset($_POST['Submit'])) 
-{    
-
- 
-        
-           
-//insert data to database
-  $result ="INSERT INTO sink (id,source,filename,product_name,type,thumbnail) VALUES ('".$_POST['id']."', '".$_POST['source']."','".$_POST['filename']."', '".$_POST['product_name']."','".$_POST['type']."', '".$_POST['thumbnail']."')";
-  if ($dbCon->query($result) === TRUE)
-  {
-
-    echo"<script type='text/javascript'>alert('submitted successfully!')</script>";
-
-  }
-  else{
-    echo "<script type='text/javascript'>alert('failed!')</script>";
-  }
-}
-
-?>
-
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Forms</title>
+    <title>Tables</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -66,14 +42,18 @@ if(isset($_POST['Submit']))
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
-                    <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
+                  <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-               <a id="search" href="#"></a>
+                 <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                    </svg>
+                  </a></li>
+ 
               </ul>
             </div>
           </div>
@@ -106,15 +86,15 @@ if(isset($_POST['Submit']))
                 <li><a class="sidebar-link" href="Client.php">Client</a></li>
               </ul>
             </li>
+            </li>
            
-             
-
+            
         </nav>
         <div class="content-inner w-100">
           <!-- Page Header-->
           <header class="bg-white shadow-sm px-4 py-3 z-index-20">
             <div class="container-fluid px-0">
-              <h2 class="mb-0 p-1">Forms</h2>
+              <h2 class="mb-0 p-1">Tables</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
@@ -123,88 +103,94 @@ if(isset($_POST['Submit']))
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 py-3">
                   <li class="breadcrumb-item"><a class="fw-light" href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active fw-light" aria-current="page">Forms</li>
+                  <li class="breadcrumb-item active fw-light" aria-current="page">Tables</li>
                 </ol>
               </nav>
             </div>
           </div>
-          <!-- Forms Section-->
-          <section class="forms"> 
+          <section class="tables">   
             <div class="container-fluid">
-              <div class="row">
-                <!-- Form Elements -->
-                <div class="col-lg-12">
-                  <div class="card">
+              <div class="row gy-4">
+                
+                <div class="col-lg-6">
+                  <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
                         <div class="dropdown">
-                          
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"></div>
+                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 edit" href="forms3.php"> Update</a></div>
                         </div>
                       </div>
                       <h3 class="h4 mb-0">sink</h3>
                     </div>
-                    <div class="card-body">
-                    <form action="#" method="POST" class="form-horizontal">
-                        <div class="row">
-                          <label class="col-sm-3 form-label">id</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="number" name="id" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">source</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="source" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">filename</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="filename" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">product_name</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="product_name" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">type</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="type" required>
-                          </div>
-                        </div>
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <label class="col-sm-3 form-label">thumbnail</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" type="text" name="thumbnail" required>
-                          </div>
-                        </div>
-                        
-                       
-                        <div class="border-bottom my-5 border-gray-200"></div>
-                        <div class="row">
-                          <div class="col-sm-9 ms-auto">
-                            <button class="btn btn-secondary" type="reset">Cancel</button>
-                            <button class="btn btn-primary" type="submit" name="Submit">Save changes</button>
-                          </div>
-                        </div>
-                      </form>
+                    <div class="card-body overflow-auto" style="height: 400px;">
+                      <div class="table-responsive">
+                        <table class="table mb-0 table-striped table-hover">
+                          <thead>
+                           <tr>
+                              <th scope="col">id</th>
+                              <th scope="col">source</th>
+                              <th scope="col">filename</th>
+                              <th scope="col">product_name</th>
+                              <th scope="col">type</th>
+                              <th scope="col">thumbnail</th>
+                              <th scope="col">Delete </th>
+                              <th scope="col">Edit </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <?php include 'retrieve-data3.php'; ?>
+                <?php if ($result->num_rows > 0): ?>
+
+                <?php while($array=mysqli_fetch_row($result)): ?>
+                  <form method="POST" name="del" action="delete.php">
+                            <tr>
+                              <th scope="row"><?php echo $array[0];?></th>
+                              <input type="hidden" name="id" value=<?php echo $array[0]; ?>>
+                              <td><?php echo $array[1];?></td>
+                              <td><?php echo $array[2];?></td>
+                              <td><?php echo $array[3];?></td>
+                              <td><?php echo $array[4];?></td>
+                              <td><?php echo $array[5];?></td>
+                               <td>
+                                 <button type="submit" name="submit" class="btn btn-outline-danger" value="sink" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                  </svg>
+                                </button>
+                              </td>
+                              <td>
+                                 <button type="submit" name="submit" class="btn btn-outline-info" value="ral_standard" >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+</svg>
+                                </button>
+                              </td>
+
+                            </tr>
+                            </form>
+                             <?php endwhile; ?>
+                            <?php else: ?>
+                           <tr>
+                   <td colspan="5" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                 <?php endif; ?>
+                <?php mysqli_free_result($result); ?>
+                            
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
+              
+                 
+                </div> 
+              
+
+          </section> 
           <!-- Page Footer-->
-          <footer class="position-absolute bottom-0 bg-dark text-center py-3 w-100 text-xs" id="footer" >
+         <footer class="position-absolute bottom-0 bg-dark text-center py-3  text-xs" id="footer" >
                   <img style="width: 10%;" src="img/logo2.png">
           </footer>
         </div>

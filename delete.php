@@ -29,7 +29,7 @@
         else
         {
             echo "<script>
-                    window.location='index.html'
+                    window.location='index.php'
                 </script>";
         }
     }

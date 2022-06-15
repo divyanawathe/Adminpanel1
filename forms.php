@@ -66,17 +66,15 @@ if(isset($_POST['Submit']))
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
-                  <div class="brand-text d-none d-lg-inline-block"><img style="width:150px;" src="img/logo2.png"></div>
+                    <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                
                 <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
-                      <use xlink:href="#find-1"> </use>
-                    </svg></a></li>
+               <a id="search" href="#"></a>
               </ul>
             </div>
           </div>
@@ -98,27 +96,19 @@ if(isset($_POST['Submit']))
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#real-estate-1"> </use>
                 </svg>Home </a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="tables.php"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#portfolio-grid-1"> </use>
-                </svg>Tables </a></li>
-           
-              <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
+             <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#browser-window-1"> </use>
-                </svg>Forms</a>
+                </svg>Tables</a>
               <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="forms.php">Inqueries</a></li>
-                <li><a class="sidebar-link" href="forms2.php">ral_standard</a></li>
-                <li><a class="sidebar-link" href="forms3.php">sink</a></li>
-                <li><a class="sidebar-link" href="forms4.php">Client</a></li>
+                <li><a class="sidebar-link" href="Inquiries.php">Inqueries</a></li>
+                <li><a class="sidebar-link" href="ral_standard.php">ral_standard</a></li>
+                <li><a class="sidebar-link" href="sink.php">sink</a></li>
+                <li><a class="sidebar-link" href="Client.php">Client</a></li>
               </ul>
             </li>
-
-            <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#disable-1"> </use>
-                </svg>Login page </a></li>
+           
+              
         </nav>
         <div class="content-inner w-100">
           <!-- Page Header-->
