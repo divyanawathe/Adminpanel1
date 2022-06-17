@@ -76,7 +76,7 @@ if(!empty($_GET['status'])){
             <div class="navbar-holder d-flex align-items-center justify-content-between w-100">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
+                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="login.php">
                   <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
@@ -107,7 +107,7 @@ if(!empty($_GET['status'])){
           </div>
           <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
           <ul class="list-unstyled py-4">
-            <li class="sidebar-item"><a class="sidebar-link" href="index.html"> 
+            <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#real-estate-1"> </use>
                 </svg>Home </a></li>
@@ -138,7 +138,7 @@ if(!empty($_GET['status'])){
             <div class="container-fluid">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 py-3">
-                  <li class="breadcrumb-item"><a class="fw-light" href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a class="fw-light" href="login.php">Home</a></li>
                   <li class="breadcrumb-item active fw-light" aria-current="page">Tables</li>
                 </ol>
               </nav>

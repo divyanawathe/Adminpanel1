@@ -1,3 +1,40 @@
+<?php
+// Load the database configuration file
+include_once 'mydbCon.php';
+
+// Get status message
+if(!empty($_GET['status'])){
+    switch($_GET['status']){
+        case 'succ':
+            $statusType = 'alert-success';
+            $statusMsg = 'Members data has been imported successfully.';
+            break;
+        case 'err':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Some problem occurred, please try again.';
+            break;
+        case 'invalid_file':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Please upload a valid CSV file.';
+            break;
+        default:
+            $statusType = '';
+            $statusMsg = '';
+    }
+}
+?>
+
+<!-- Display status message -->
+<?php if(!empty($statusMsg)){ ?>
+<div class="col-xs-12">
+    <div class="alert <?php echo $statusType; ?>"><?php echo $statusMsg; ?></div>
+</div>
+<?php } ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -41,7 +78,7 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between w-100">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
+                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="login.php">
                   <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
@@ -71,7 +108,7 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
           <ul class="list-unstyled py-4">
-            <li class="sidebar-item"><a class="sidebar-link" href="index.html"> 
+            <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#real-estate-1"> </use>
                 </svg>Home </a></li>
@@ -102,7 +139,7 @@
             <div class="container-fluid">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 py-3">
-                  <li class="breadcrumb-item"><a class="fw-light" href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a class="fw-light" href="login.php">Home</a></li>
                   <li class="breadcrumb-item active fw-light" aria-current="page">Tables</li>
                 </ol>
               </nav>
@@ -177,6 +214,14 @@
                  <?php endif; ?>
                 <?php mysqli_free_result($result); ?>
                             
+                               <?php
+        // Get member rows
+        $result = $dbCon->query("SELECT * FROM sink ORDER BY id DESC");
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+        ?>
+         <?php } }else{ ?>
+           <?php } ?> 
                           </tbody>
                         </table>
                       </div>
@@ -189,6 +234,19 @@
         
 
           </section> 
+             <!-- Import link -->
+    <div class="col-md-12 head">
+        <div class="float-right">
+            <a href="javascript:void(0);" class="btn btn-success" onclick="formToggle('importFrm');"><i class="plus"></i> Import</a>
+        </div>
+    </div>
+           <!-- Show/hide CSV upload form -->
+    <div id="importFrm" style="display: none;">
+        <form action="importData1.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <input style="color: blue; background-color: blueviolet;" type="submit"  name="importSubmit" value="IMPORT">
+        </form>
+    </div>
           <!-- Page Footer-->
          <footer class="position-absolute bottom-0 bg-dark text-center py-3  text-xs" id="footer" >
                   <img style="width: 10%;" src="img/logo2.png">
@@ -197,6 +255,16 @@
       </div>
     </div>
     <!-- JavaScript files-->
+    <script>
+function formToggle(ID){
+    var element = document.getElementById(ID);
+    if(element.style.display === "none"){
+        element.style.display = "block";
+    }else{
+        element.style.display = "none";
+    }
+}
+</script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="vendor/just-validate/js/just-validate.min.js"></script>

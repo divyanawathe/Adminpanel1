@@ -9,8 +9,10 @@
     include "mydbCon.php";
     if(isset($_POST['submit']))
     {
+
         if($_COOKIE["flag"]=="0")
         {   
+            echo "<script>alert('hello');</script>";
             $sql="DELETE FROM ".$_POST['submit']." WHERE id='".$_POST['id']."'"; 
             if ($dbCon->query($sql) === TRUE)
             {

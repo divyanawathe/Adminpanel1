@@ -56,7 +56,7 @@ if(isset($_POST['Submit']))
                 <use xlink:href="#close-1"> </use>
               </svg>
             </button>
-            <form id="searchForm" action="#" role="search">
+            <form id="searchForm"  action="#" role="search">
               <input class="form-control shadow-0" type="text" placeholder="What are you looking for...">
             </form>
           </div>
@@ -144,7 +144,7 @@ if(isset($_POST['Submit']))
                       <h3 class="h4 mb-0">sink</h3>
                     </div>
                     <div class="card-body">
-                    <form action="#" method="POST" class="form-horizontal">
+                    <form action="edit.php?ID=<?php echo $id ?>" method="post" class="form-horizontal">
                         <div class="row">
                           <label class="col-sm-3 form-label">id</label>
                           <div class="col-sm-9">
