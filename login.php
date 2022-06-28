@@ -34,14 +34,14 @@
               </svg>
             </button>
             <form id="searchForm" action="#" role="search">
-              <input class="form-control shadow-0" type="text" placeholder="What are you looking for...">
+              <input class="form-control shadow-0" type="text">
             </form>
           </div>
           <div class="container-fluid w-100">
             <div class="navbar-holder d-flex align-items-center justify-content-between w-100">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
+                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="login.php">
                     <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
@@ -51,11 +51,10 @@
                 <!-- Search-->
                 <a  id="search" href="#"></a>
               <a href="index.php"> Login<i class="bi bi-person-circle"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-</svg></a>
-
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg></a>
               </ul>
             </div>
           </div>
@@ -65,19 +64,21 @@
         <!-- Side Navbar -->
        <nav class="side-navbar z-index-40">
           <!-- Sidebar Header-->
+          <form method="POST"  name="" action="upload.php">
+                          
           <div class="sidebar-header d-flex align-items-center py-4 px-3"><img class="avatar shadow-0 img-fluid rounded-circle" src="">
             <div class="ms-3 title">
               <h1 class="h4 mb-2">Panvee Bhatt</h1>
               <p class="text-sm text-gray-500 fw-light mb-0 lh-1">Web Designer</p>
             </div>
           </div>
+           </form>
           <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
           <ul class="list-unstyled py-4">
             <li class="sidebar-item active"><a class="sidebar-link" href="login.php"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#real-estate-1"> </use>
                 </svg>Home </a></li>
-            
             <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#browser-window-1"> </use>

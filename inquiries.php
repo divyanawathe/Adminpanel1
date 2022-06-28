@@ -107,11 +107,10 @@
               </nav>
             </div>
           </div>
-          <section class="tables">   
+          <section class="tables">
             <div class="container-fluid">
               <div class="row gy-4">
              <div class="col-lg-6">
-
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
@@ -135,18 +134,18 @@
                         <table class="table mb-0">
                           <thead>
                             <tr>
-                              <th scope="col">id</th>
-                              <th scope="col">vendor_id</th>
-                              <th scope="col">name</th>
-                              <th scope="col">email</th>
-                              <th scope="col">phone_num</th>
-                              <th scope="col">city</th>
-                              <th scope="col">state</th>
-                              <th scope="col">qur_subject</th>
-                              <th scope="col">query</th>
-                              <th scope="col">page_no</th>
-                              <th scope="col">Delete</th>
-                              <th scope="col">Edit </th>
+                                    <th scope="col">id</th>
+                                    <th scope="col">vendor_id</th>
+                                    <th scope="col">name</th>
+                                    <th scope="col">email</th>
+                                    <th scope="col">phone_num</th>
+                                    <th scope="col">city</th>
+                                    <th scope="col">state</th>
+                                    <th scope="col">qur_subject</th>
+                                    <th scope="col">query</th>
+                                    <th scope="col">page_no</th>
+                                    <th scope="col">Delete</th>
+                                    <th scope="col">Edit </th>
                             </tr>
                           </thead>
                           <tbody class="overflow-auto">
@@ -158,15 +157,15 @@
                             <tr>
                               <th scope="row"><?php echo $array[0];?></th>
                               <input type="hidden" name="id" value=<?php echo $array[0]; ?>>
-                              <td><?php echo $array[1];?></td>
-                              <td><?php echo $array[2];?></td>
-                              <td><?php echo $array[3];?></td>
-                              <td><?php echo $array[4];?></td>
-                              <td><?php echo $array[5];?></td>
-                              <td><?php echo $array[6];?></td>
-                              <td><?php echo $array[7];?></td>
-                              <td><?php echo $array[8];?></td>
-                              <td><?php echo $array[9];?></td>
+                                    <td><?php echo $array[1];?></td>
+                                    <td><?php echo $array[2];?></td>
+                                    <td><?php echo $array[3];?></td>
+                                    <td><?php echo $array[4];?></td>
+                                    <td><?php echo $array[5];?></td>
+                                    <td><?php echo $array[6];?></td>
+                                    <td><?php echo $array[7];?></td>
+                                    <td><?php echo $array[8];?></td>
+                                    <td><?php echo $array[9];?></td>
                               <td>
                                 <button type="submit" name="submit" class="btn btn-outline-danger" value="Inqueries" >
                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -174,15 +173,18 @@
                                   </svg>
                                 </button>
                               </td>
+                                </form>
                              <td>
+                              <form method="POST" name="edit" action="edit.php">
                                  <button type="edit" name="edit" class="btn btn-outline-info" value="ral_standard" >
                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-</svg>
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg>
                                 </button>
                               </td>
+                            </form>
                             </tr>
-                      </form>
+                    
                             <?php endwhile; ?>
                             <?php else: ?>
                            <tr>

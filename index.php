@@ -53,7 +53,6 @@
             font-size: 18px;
         }
     </style>
-
   </head>
   <body>
     <div class="login-page">
