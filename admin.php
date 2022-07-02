@@ -1,3 +1,15 @@
+ <?php
+ $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $databaseName = "loginentry";
+
+    $conn = mysqli_connect($servername, $username, $password, $databaseName);
+if(!$conn){
+          die('Could not Connect MySql Server:' .mysql_error());
+      }
+    ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -68,8 +80,8 @@
                           
           <div class="sidebar-header d-flex align-items-center py-4 px-3"><img class="avatar shadow-0 img-fluid rounded-circle" src="">
             <div class="ms-3 title">
-              <h1 class="h4 mb-2">Panvee Bhatt</h1>
-              <p class="text-sm text-gray-500 fw-light mb-0 lh-1">Web Designer</p>
+              <h1 class="h4 mb-2"><?php echo $_SESSION['name']; ?></h1>
+              <p class="text-sm text-gray-500 fw-light mb-0 lh-1">"><?php echo $_SESSION['Phone_number']; ?></p>
             </div>
           </div>
            </form>
