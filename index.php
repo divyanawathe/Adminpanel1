@@ -10,11 +10,13 @@
         die ("connection failed".
             mysqli_connect_error());
     }
-    if(isset($_POST['loginUsername'])&& isset($_POST['loginPassword'])){
+    if(isset($_POST['loginUsername'])&& isset($_POST['loginPassword'])&& isset($_POST['name']) &&isset($_POST['photo'])){
     $un = mysqli_real_escape_string($conn,$_POST['loginUsername']);
     $pw =  mysqli_real_escape_string($conn,$_POST['loginPassword']);
- 
-    $query = "SELECT email,password FROM loginpage WHERE email='$un' AND password='$pw'";
+    $name = mysqli_real_escape_string($conn,$_POST['name']);
+    $photo = mysqli_real_escape_string($conn,$_POST['photo']);
+  
+    $query = "SELECT email,password,name,photo FROM loginpage WHERE email='$un' , password='$pw', name='$name', photo='$photo'";
 
     $result_can = mysqli_query($conn, $query); 
     $count=mysqli_num_rows($result_can);
@@ -86,7 +88,7 @@
 
                     <?php
    
-                    if(isset($_POST['loginUsername'])&& isset($_POST['loginPassword'])){
+                    if(isset($_POST['loginUsername'])&& isset($_POST['loginPassword'])&& isset($_POST['name']) &&isset($_POST['photo'])){
                           if($count==1)
                           {
                               header("Location:index.html");

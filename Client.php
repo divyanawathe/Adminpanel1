@@ -74,7 +74,7 @@ if(!empty($_GET['status'])){
             <div class="navbar-holder d-flex align-items-center justify-content-between w-100">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="login.php">
+                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="admin.php">
                   <div class="brand-text d-none d-lg-inline-block"><img style="width: 150px;" src="img/logo2.png"></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>V</strong></div></a>
                 <!-- Toggle Button--><a class="menu-btn active" id="toggle-btn" href="#"><span></span><span></span><span></span></a>
@@ -95,16 +95,19 @@ if(!empty($_GET['status'])){
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
         <nav class="side-navbar z-index-40">
-          <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center py-4 px-3"><img class="avatar shadow-0 img-fluid rounded-circle" src="img/avatar-1.jpg" >
+           <!-- Sidebar Header-->
+          <form method="POST"  name="" action="upload.php">
+                          
+         <div class="sidebar-header d-flex align-items-center py-4 px-3"> <!--<img class="avatar shadow-0 img-fluid rounded-circle" src="">-->
             <div class="ms-3 title">
-              <h1 class="h4 mb-2">Mark Stephen</h1>
-              <p class="text-sm text-gray-500 fw-light mb-0 lh-1">Web Designer</p>
+              <!--<h1 class="h4 mb-2"></h1>-->
+              <h3 class="text-sm text-gray-700 fw-light mb-0 lh-1"><?php echo $_POST['loginUsername']; ?></h3>
             </div>
           </div>
+           </form> 
           <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
           <ul class="list-unstyled py-4">
-            <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
+            <li class="sidebar-item"><a class="sidebar-link" href="admin.php"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#real-estate-1"> </use>
                 </svg>Home </a></li>
@@ -149,8 +152,7 @@ if(!empty($_GET['status'])){
                     <div class="card-header">
                       <div class="card-close">
                         <div class="dropdown">
-                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 edit" href="forms4.php"> Update</a></div>
+                          <button type="button" class="btn btn-light"><a href="forms3.php">Update</a></button> 
                         </div>
                       </div>
                       <h3 class="h4 mb-0">Client</h3>

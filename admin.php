@@ -78,13 +78,13 @@ if(!$conn){
           <!-- Sidebar Header-->
           <form method="POST"  name="" action="upload.php">
                           
-          <div class="sidebar-header d-flex align-items-center py-4 px-3"><img class="avatar shadow-0 img-fluid rounded-circle" src="">
+         <div class="sidebar-header d-flex align-items-center py-4 px-3"> <!--<img class="avatar shadow-0 img-fluid rounded-circle" src="">-->
             <div class="ms-3 title">
-              <h1 class="h4 mb-2"><?php echo $_SESSION['name']; ?></h1>
-              <p class="text-sm text-gray-500 fw-light mb-0 lh-1">"><?php echo $_SESSION['Phone_number']; ?></p>
+              <!--<h1 class="h4 mb-2"></h1>-->
+              <h3 class="text-sm text-gray-700 fw-light mb-0 lh-1"><?php echo $_POST['loginUsername']; ?></h3>
             </div>
           </div>
-           </form>
+           </form> 
           <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
           <ul class="list-unstyled py-4">
             <li class="sidebar-item active"><a class="sidebar-link" href="login.php"> 

@@ -61,13 +61,16 @@
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
         <nav class="side-navbar z-index-40">
-          <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center py-4 px-3"><img class="avatar shadow-0 img-fluid rounded-circle" src="img/avatar-1.jpg" >
+           <!-- Sidebar Header-->
+          <form method="POST"  name="" action="upload.php">
+                          
+         <div class="sidebar-header d-flex align-items-center py-4 px-3"> <!--<img class="avatar shadow-0 img-fluid rounded-circle" src="">-->
             <div class="ms-3 title">
-              <h1 class="h4 mb-2">Mark Stephen</h1>
-              <p class="text-sm text-gray-500 fw-light mb-0 lh-1">Web Designer</p>
+              <!--<h1 class="h4 mb-2"></h1>-->
+              <h3 class="text-sm text-gray-700 fw-light mb-0 lh-1"><?php echo $_POST['loginUsername']; ?></h3>
             </div>
           </div>
+           </form> 
           <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
           <ul class="list-unstyled py-4">
             <li class="sidebar-item"><a class="sidebar-link" href="index.html"> 
@@ -86,8 +89,6 @@
               </ul>
             </li>
             </li>
-           
-            
         </nav>
         <div class="content-inner w-100">
           <!-- Page Header-->
@@ -114,17 +115,8 @@
                   <div class="card mb-0">
                     <div class="card-header">
                       <div class="card-close">
-                        <div class="dropdown">
-                          <button class="dropdown-toggle text-sm" type="button" id="closeCard1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v">
-                            </i>
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1">
-                            
-                            <a class="dropdown-item py-1 px-3 edit" href="forms.php"> 
-                              Update
-                            </a>
-                          </div>
+                        <div class="dropdown"> 
+                            <button type="button" class="btn btn-light"><a href="forms.php">Update</a></button> 
                         </div>
                       </div>
                       <h3 class="h4 mb-0">Inqueries</h3>
